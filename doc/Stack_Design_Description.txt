@@ -1,0 +1,27 @@
+/**
+ * @author  Pavan Dheeraj K
+ * @version 1.0, 17/07/2022
+ */
+Stack Implementation
+
+The stack is also called as LIFO(Last In First Out), as the name indicates the last data pushed into the stack is the first one to be popped out. An example use-case of this design is interrupt handling.
+When an interrupt occurs, before moving to the ISR, the return address of the current executing program must be stored somewhere. After the completion of ISR, the return address stored must be used to return to 
+original program. This is where the LIFO design comes handy. 
+
+Important operations on stack are:
+1. Push
+2. Pop
+
+There are two important constraints as to when the data can be pushed/popped to/from the stack.
+
+Data can be pushed as long as the stack is not full.
+Data can be popped as long as the stack is not empty.
+
+Following are the important signals of the design:
+1. Push        : Input to the module indicating that data needs to be pushed into the stack.
+2. Pop         : Input to the module indicating that data needs to be popped from the stack.
+3. Full        : Output from the module indicating that the stack memory is full and no more data can be pushed into the LIFO structure.
+4. Empty       : Output from the module indicating that the stack memory is empty and data cannot be popped from the LIFO structure.
+5. Top_of_stack: Output from the module indicating the location upto which the stack has been filled. 
+6. d_in        : Input to the module, represents the data to be written into the LIFO structure.
+6. d_out       : Output from the module, represents the data read from the LIFO structure.
